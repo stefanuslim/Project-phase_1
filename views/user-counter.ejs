@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>List Counters</title>
+  </head>
+  <body style="text-align:center;">
+    <h1>Please Choose Your Counters Below</h1><br>
+    <% if(message){ %>
+      <h3><%= message %></h3>
+    <% }%>
+    <table style="border: 1px solid black; margin:auto;">
+      <thead>
+        <th>Nama Loket</th>
+        <th>Status Loket</th>
+        <th>Pilihan</th>
+      </thead>
+      <% for(let i = 0; i < data.length; i++){ %>
+        <tr>
+          <td><%= data[i].name %></td>
+          <td><%=data[i].status%></td>
+          <td><a href="/users/queue/<%=data[i].id%>">Antri</a></td>
+        </tr>
+      <% }%>
+    </table>
+  </body>
+</html>
