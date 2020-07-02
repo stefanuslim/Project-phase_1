@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Admin Page</title>
+  </head>
+  <body style="text-align:center;">
+    <h1>Admin Page</h1><br><br>
+    <a href="/admins/addCounter">Add Counter</a>
+    <a href="/admins/logout">Log Out</a><br>
+
+
+    <br><br><table style="border: 1px solid black; margin:auto;">
+      <thead>
+        <th>Counter Name</th>
+        <th>Status</th>
+        <th>Action</th>
+        <th>Queue Count</th>
+      </thead>
+      <% for(let i= 0; i < data.length; i++){ %>
+        <tr>
+          <td><%= data[i].name %></td>
+          <td><%= data[i].status %></td>
+          <td><a href="/admins/changeStatus/<%=data[i].id%>">ChangeStatus</a></td>
+        </tr>
+      <% }%>
+    </table>
+
+  </body>
+</html>

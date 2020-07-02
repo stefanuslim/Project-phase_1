@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>User Login</title>
+  </head>
+  <body style="text-align:center;">
+    <% if(message){ %>
+      <p><%= message %></p>
+    <% } %>
+    <h1>Please Login Before Choosing Your Counters</h1><br>
+    <h3>Use form below</h3><br><br>
+    <form class="" action="/users/login" method="post">
+      <label for="email">Email:</label><br>
+      <input type="text" name="email" value=""><br><br>
+      <label for="password">Password:</label><br>
+      <input type="password" name="password" value=""><br><br>
+      <button type="Submit" name="button">Login</button>
+    </form>
+  </body>
+</html>
