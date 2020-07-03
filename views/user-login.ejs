@@ -1,0 +1,15 @@
+<%- include('partials/header') %>
+
+  <h1>Please Login Before Choosing Your Counters</h1><br>
+    <% if(message){ %>
+      <p style="color: red;"><%= message %></p>
+    <% } %>
+    <br><br>
+    <form class="" action="/users/login" method="post">
+      <label for="email">Email:</label><br>
+      <input type="text" name="email" value=""><br><br>
+      <label for="password">Password:</label><br>
+      <input type="password" name="password" value=""><br><br>
+      <button type="Submit" name="button">Login</button>
+    </form>
+<%- include('partials/footer') %>

@@ -1,0 +1,23 @@
+<%- include('partials/header') %>
+
+    <a href="/admins/logout" style="left:0;">Logout</a>
+    <br><br><table border="1px" style="margin: auto;">
+      <thead>
+        <th>Counter Name</th>
+        <th>Status</th>
+        <th>Update Status</th>
+      </thead>
+      <% for(let i= 0; i < data.length; i++){ %>
+        <tr>
+          <td><%= data[i].name %></td>
+          <td><%= data[i].status %></td>
+          <td>
+            <a href="/admins/changeStatus/<%=data[i].id%>">Update |</a>
+            <a href="/admins/delete/<%=data[i].id%>">Delete</a>
+          </td>
+        </tr>
+      <% }%>
+    </table>
+    <a href="/admins/addCounter">Add Counter</a>
+<%- include('partials/footer') %>
+
